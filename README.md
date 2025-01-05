@@ -1,6 +1,6 @@
 # HTD Lync6 Home Assistant Integration
 
-This custom integration allows you to control the HTD Lync6 audio distribution system directly from Home Assistant. It supports advanced features such as scene presets, volume ramping, zone grouping, and energy-saving mode, providing a seamless and enhanced audio experience. It's a fair amount different from the parent it forked from thanks significant ChatGPT tinkering.
+This custom integration allows you to control the HTD Lync6 audio distribution system directly from Home Assistant. It supports advanced features such as scene presets, volume ramping, zone grouping, and energy-saving mode, providing a seamless and enhanced audio experience. It's a fair amount different from the parent it forked from thanks significant ChatGPT tinkering. Not all features fully tested yet.
 
 ## Features
 
@@ -130,6 +130,44 @@ Restart Home Assistant again to apply the configuration.
        logs:
          custom_components.htd_lync6: debug
      ```
+
+## Potentially Useful Automations
+You can shut down all zones at night like this:
+```
+alias: Daily Ceiling Speaker Shutdown
+description: 3am
+triggers:
+  - trigger: time
+    at: "03:00:00"
+conditions: []
+actions:
+  - action: media_player.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.ceiling_speakers
+mode: single
+```
+You can power off your Amplifier if all the ceiling speaker zones are off:
+```
+alias: Power Off Yamaha Amp
+description: Powers on Yamaha if any ceiling speaker zone is turned on
+triggers:
+  - trigger: state
+    entity_id:
+      - media_player.ceiling_speakers
+    to: "off"
+    from: "on"
+conditions: []
+actions:
+  - action: media_player.turn_off
+    target:
+      device_id:
+        - 6dfcc746a539768f1eb346d0f0bd97ef
+    data: {}
+mode: single
+```
+Similarily you can reverse the on's and off's to turn on the amp if any ceiling speaker zone is turned on. Of course, the action portions need to be modified for your own amplifier.
 
 ## Acknowledgments
 
