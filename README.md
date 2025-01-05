@@ -62,7 +62,7 @@ This custom integration allows you to control the HTD Lync6 audio distribution s
 
 4. **Energy-Saving Mode**:
    - Automatically turn off zones after a specified period of inactivity.
-   - **Use Case**: Save energy by turning off outdoor speakers left on after a BBQ.
+   - **Use Case**: Save energy by turning off outdoor speakers left on after a BBQ becausey our teens wandered off and of course left the system on.
      ```yaml
      service: media_player.htd_energy_saving
      data:
