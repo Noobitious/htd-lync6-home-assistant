@@ -1,35 +1,23 @@
-htd_lync12:
-  - host: 192.168.1.133
-    zones:
-      - Master Bedroom
-      - Master Bathroom
-      - Bedroom 1
-      - Kitchen
-      - Living Room
-      - Fireplace Porch
-      - Deck at Living Room
-      - Deck at Master Bedroom
-      - Upstairs Den
-      - Bedroom 2
-      - Bedroom 3
-      - Bonus Room
+htd_lync6:
+  host: 192.168.2.63  # Replace with the actual IP address of your HTD Lync6 controller
+  zones:
+    - Master           # Zone 1
+    - Ensuite          # Zone 2
+    - Living           # Zone 3
+    - Basement         # Zone 4
+    - Patio            # Zone 5
+    - Garage           # Zone 6
+  sources:
+    - NA 1             # Source 1
+    - NA 2             # Source 2
+    - Living Room TV   # Source 3
+    - Basement TV      # Source 4
+    - NA 5             # Source 5
+    - NA 6             # Source 6
+    - NA 7             # Source 7
+    - MusicCast        # Source 8
+    - NA 9             # Source 9
+    - NA 10            # Source 10
+    - NA 11            # Source 11
+    - NA 12            # Source 12
 
-    sources:
-      - NA 1
-      - NA 2
-      - NA 3
-      - Bluetooth
-      - NA 5
-      - NA 6
-      - NA 7
-      - NA 8
-      - NA 9
-      - NA 10
-      - NA 11
-      - NA 12
-      - NA 13
-      - NA 14
-      - NA 15
-      - Airplay
-      - Alexa
-      - MP3 Player
