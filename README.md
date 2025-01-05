@@ -1,6 +1,6 @@
 # HTD Lync6 Home Assistant Integration
 
-This custom integration allows you to control the HTD Lync6 audio distribution system directly from Home Assistant. It supports advanced features such as scene presets, volume ramping, zone grouping, and energy-saving mode, providing a seamless and enhanced audio experience. It's a fair amount different from the parent it forked from thanks significant ChatGPT tinkering. Not all features fully tested yet.
+This custom integration allows you to control the HTD Lync6 audio distribution system directly from Home Assistant. It supports advanced features such as scene presets, volume ramping, zone grouping, and energy-saving mode, providing a seamless and enhanced audio experience. It's a fair amount different from the parent it forked from thanks significant ChatGPT tinkering. Not all features fully tested yet. It's also warning my it's not using the modern async initiatilization approach, but me and ChatGPT didn't have much success with that. If anyone can help with that, seems that would be good.
 
 ## Features
 
