@@ -132,6 +132,9 @@ Restart Home Assistant again to apply the configuration.
      ```
 
 ## Potentially Useful Automations
+
+For these examples, make a "helper of type media_player called "ceiling_speakers".
+
 You can shut down all zones at night like this:
 ```
 alias: Daily Ceiling Speaker Shutdown
